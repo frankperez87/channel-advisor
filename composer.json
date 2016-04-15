@@ -1,0 +1,10 @@
+{
+  "autoload": {
+    "psr-4": {
+      "ChannelAdvisor\\": "src/ChannelAdvisor/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.1"
+  }
+}
