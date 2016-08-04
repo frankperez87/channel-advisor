@@ -4,6 +4,7 @@ use ChannelAdvisor\Services\Admin\Admin;
 use ChannelAdvisor\Services\Order\Fulfillment;
 use ChannelAdvisor\Services\Order\Order;
 use ChannelAdvisor\Services\Order\Shipping;
+use ChannelAdvisor\Services\Inventory\Inventory;
 
 class ServiceFactory
 {
@@ -39,6 +40,13 @@ class ServiceFactory
                     'http://api.channeladvisor.com/webservices/'
                 );
                 $service = new Shipping($client);
+                break;
+            case 'inventory':
+                $client->setUrls(
+                    'https://api.channeladvisor.com/ChannelAdvisorAPI/v7/InventoryService.asmx?WSDL',
+                    'http://api.channeladvisor.com/webservices/'
+                );
+                $service = new Inventory($client);
                 break;
         }
 
