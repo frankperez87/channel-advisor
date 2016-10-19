@@ -1,4 +1,12 @@
 {
+  "name": "frankperez87/channel-advisor",
+  "description": "This package allows you to easily integrate with ChannelAdvisor. This is not the official package.",
+  "authors": [
+    {
+      "name": "Frank Perez",
+      "email": "frank@fjp.io"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "ChannelAdvisor\\": "src/ChannelAdvisor/"
