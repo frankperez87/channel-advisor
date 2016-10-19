@@ -6,15 +6,15 @@ class Admin extends Service
 {
     public function getAuthorizationList($localID = null)
     {
-        return $this->request()->GetAuthorizationList([
+        return $this->request()->GetAuthorizationList(array(
             'localID' => $localID,
-        ]);
+        ));
     }
 
     public function requestAccess($localID)
     {
-        return $this->request()->RequestAccess([
+        return $this->request()->RequestAccess(array(
             'localID' => $localID,
-        ]);
+        ));
     }
 }
