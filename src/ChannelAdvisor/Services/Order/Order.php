@@ -109,6 +109,15 @@ class Order extends Service
         ));
     }
 
+    public function setOrdersExportStatusByClientOrderIDs(array $clientOrderIdentifierList, $markAsExported = true)
+    {
+        return $this->request()->SetOrdersExportStatus(array(
+            'accountID' => $this->getAccountId(),
+            'clientOrderIdentifierList' => $clientOrderIdentifierList,
+            'markAsExported' => $markAsExported,
+        ));
+    }
+
     public function setOrdersExportStatus(array $orderIDList, array $clientOrderIdentifierList, $markAsExported)
     {
         return $this->request()->SetOrdersExportStatus(array(
